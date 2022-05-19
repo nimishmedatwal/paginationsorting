@@ -5,7 +5,7 @@ import json
 # Create your views here.
 
 def directory(request):
-    # get_titles()  
+    # get_titles()  #if running for the first time uncomment this to save the data in database.
     list=Person.objects.all().order_by('alphanumeric')
     paginator = Paginator(list,10)
     page_number = request.GET.get('page')
